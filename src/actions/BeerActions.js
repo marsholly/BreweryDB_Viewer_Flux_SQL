@@ -9,6 +9,12 @@ const BeerActions = {
   },
   getAllSampled() {
     API.getAllSampled()
+  },
+  deleteBeer(id) {
+    API.deleteBeer(id)
+  },
+  updateBeer(id, newBeerInfo) {
+    API.updateBeer(id, newBeerInfo)
   }
 }
 

@@ -17,9 +17,22 @@ const API = {
   addSampled(sampleBeer) {
     axios.post('/api/users', sampleBeer)
       .then(res => res.data)
-      .then(ServerActions.receiveAllSampled)
+      .then(this.getAllSampled)
+      .catch(console.error)
+  },
+  deleteBeer(id) {
+    axios.delete(`/api/users/${id}`)
+      .then(res => res.data)
+      .then(this.getAllSampled)
+      .catch(console.error)
+  },
+  updateBeer(id, newBeerInfo) {
+    axios.put(`/api/users/${id}`, newBeerInfo)
+      .then(res => res.data)
+      .then(this.getAllSampled)
       .catch(console.error)
   }
+
 }
 
 export default API;

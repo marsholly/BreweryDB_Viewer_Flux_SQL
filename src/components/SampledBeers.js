@@ -27,11 +27,12 @@ export default class SampledBeers extends Component {
   }
 
   updateBeer(id) {
-
+    
+    BeerActions.updateBeer(id)
   }
 
   deleteBeer(id) {
-
+    BeerActions.deleteBeer(id)
   }
 
   render() {
