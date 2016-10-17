@@ -22,7 +22,6 @@ exports.getBeers = function(){
       if(err){
         reject(err);
       }else{
-        console.log('beers:', beers)
         resolve(beers);
       }
     });
