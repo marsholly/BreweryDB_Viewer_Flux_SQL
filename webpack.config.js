@@ -1,17 +1,29 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
+  debug:true,
   entry: [
     './node_modules/bootstrap-loader',
     './src/css/style.css',
     './src/index.js',
+    'webpack-hot-middleware/client?reload=true'
   ],
+  target: "web",
   output: {
     path: __dirname + '/build',
-    publicPath: 'build/',
+    publicPath: '/',
     filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './src'
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin()
+  ],
   module: {
     loaders: [
       {
