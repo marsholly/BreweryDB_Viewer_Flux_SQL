@@ -13,8 +13,8 @@ const BeerActions = {
   deleteBeer(id) {
     API.deleteBeer(id)
   },
-  updateBeer(id, newBeerInfo) {
-    API.updateBeer(id, newBeerInfo)
+  updateBeer(id, newBeer) {
+    API.updateBeer(id, newBeer)
   }
 }
 
