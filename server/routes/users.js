@@ -14,8 +14,8 @@ router.route('/')
  })
   .post((req, res) => {
     User.saveBeer(req.body)
-     .then(()=>{
-        res.send();
+     .then(beers=>{
+        res.send(beers);
      })
      .catch(err=>{
         res.status(400).send(err);

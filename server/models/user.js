@@ -37,8 +37,6 @@ exports.saveBeer = function(newBeer){
                    .setFields(newBeer)
                    .set('id', uuid())
                    .toString();
-
-                   console.log('sql:', sql)
     connection.query(sql, err=>{
       if(err){
         reject(err);
