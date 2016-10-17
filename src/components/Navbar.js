@@ -16,13 +16,17 @@ export default class Navbar extends Component {
     BeerActions.randomBeer();
   }
 
+  getAllSampled() {
+    BeerActions.getAllSampled();
+  }
+
   render() {
     return (
       <div className="container">
         <nav className="navbar navbar-default navbar-fixed-top">
           <form className="navbar-form navbar-left" role="search">
             <Link to='beers' className="btn btn-primary" onClick={this.randomBeer}>Random</Link>
-            <Link to='view' className="btn btn-success">View SampledBeers</Link>
+            <Link to='view' className="btn btn-success" onClick={this.getAllSampled}>View SampledBeers</Link>
           </form>
         </nav>
         <div className="beersContainer">

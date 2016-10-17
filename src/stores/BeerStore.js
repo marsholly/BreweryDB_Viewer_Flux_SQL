@@ -16,7 +16,7 @@ class BeerStore extends EventEmitter {
           this.emit('CHANGE');
           break;
         case 'RECEIVE_ALL_SAMPLED':
-          _beers = action.payload.beers;
+          _sampledBeer = action.payload.beers;
           this.emit('CHANGE');
           break;
       }

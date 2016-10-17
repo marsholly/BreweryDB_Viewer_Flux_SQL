@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BeerStore from '../stores/BeerStore';
-// import BeerActions from  '../actions/BeerActions';
+import BeerActions from  '../actions/BeerActions';
 
 export default class SampledBeers extends Component {
   constructor() {
@@ -23,6 +23,7 @@ export default class SampledBeers extends Component {
   _onChange() {
     this.setState({ sampledBeers: BeerStore.getAllSampled() })
   }
+
 
   // addSampled(beerName) {
   //   let sampleBeer = {

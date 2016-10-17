@@ -10,10 +10,7 @@ const API = {
   },
   getAllSampled() {
     axios.get('/api/users')
-      .then(res =>
-        console.log('res.data:', res.data)
-        // res.data
-      )
+      .then(res =>res.data)
       .then(ServerActions.receiveAllSampled)
       .catch(console.error)
   },

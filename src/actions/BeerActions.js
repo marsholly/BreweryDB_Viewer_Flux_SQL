@@ -6,6 +6,9 @@ const BeerActions = {
   },
   addSampled(sampleBeer) {
     API.addSampled(sampleBeer)
+  },
+  getAllSampled() {
+    API.getAllSampled()
   }
 }
 
